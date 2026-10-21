@@ -33,16 +33,16 @@ int main()
 
         switch (d) {
             case DOWN:
-                x -= w * GetFrameTime() * speed;
+                y += w * GetFrameTime() * speed;
                 break;
             case LEFT:
-                y -= h * GetFrameTime() * speed;
+                x -= h * GetFrameTime() * speed;
                 break;
             case RIGHT:
-                y += h * GetFrameTime() * speed;
+                x += h * GetFrameTime() * speed;
                 break;
             case UP:
-                x += w * GetFrameTime() * speed;
+                y -= w * GetFrameTime() * speed;
                 break;
         }
 
