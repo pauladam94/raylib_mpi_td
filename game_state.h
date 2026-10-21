@@ -39,5 +39,6 @@ active_pice* get_acive_pice(game_state *g_state);
 active_pice* new_active_pice(int x, int y, Dir dir, Pice_type type);
 void change_active_pice(active_pice *new);
 void move_active_pice(int x, int y);
+game_state* game_state_init();
 
 #endif
