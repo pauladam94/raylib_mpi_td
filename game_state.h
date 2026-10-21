@@ -25,17 +25,19 @@ typedef struct active_pice {
   int active_x;
   int active_y;
   Dir dir;
-  int speed;
   Pice_type type;
 } active_pice;
 
 typedef struct game_state {
   active_pice *acc;
   Pice_type tab[HEIGHT][WIDTH];
+  int speed;
 } game_state;
 
-Pice_type** get_tab(*game_state);
-active_pice* get_acive_pice(*game_state);
-
+Pice_type** get_tab(game_state *g_state);
+active_pice* get_acive_pice(game_state *g_state);
+active_pice* new_active_pice(int x, int y, Dir dir, Pice_type type);
+void change_active_pice(active_pice *new);
+void move_active_pice(int x, int y);
 
 #endif
