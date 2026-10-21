@@ -9,10 +9,14 @@ typedef enum Dir {
 } Dir;
 
 typedef struct game_state {
-  int x;
-  int y
+  int active_x;
+  int active_y;
   Dir dir;
   int speed;
+
+  
+
+  
 } game_state;
 
 #endif
